@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="AntPropertiesFileSelectionDialog.showAll" value="false"/>
+	<item key="AntPropertiesFileSelectionDialog.lastContainer" value="/Sandbox"/>
+	<item key="antview.lastSearchString" value="build.xml"/>
+	<item key="antview.lastSearchScope" value=""/>
+	<section name="org.eclipse.ant.internal.ui.views.AntView">
+		<item key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;antView&gt;&#x0D;&#x0A;&lt;project default=&quot;devel.all&quot; error=&quot;false&quot; name=&quot;Preon32 Sandbox&quot; path=&quot;/Sandbox/build.xml&quot;/&gt;&#x0D;&#x0A;&lt;project error=&quot;false&quot; name=&quot;Preon32 Sandbox User&quot; path=&quot;/Sandbox/buildUser.xml&quot;/&gt;&#x0D;&#x0A;&lt;filterInternalTargets value=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;/antView&gt;"/>
+	</section>
+</section>

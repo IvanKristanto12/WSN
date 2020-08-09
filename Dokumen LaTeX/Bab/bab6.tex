@@ -1,0 +1,17 @@
+\chapter{Kesimpulan dan Saran}
+\label{chap:kesimpulanSaran}
+\section{Kesimpulan}
+Berdasarkan hasil penelitian yang dilakukan, diperoleh kesimpulan - kesimpulan sebagai berikut:
+\begin{enumerate}
+	\item Aplikasi ekstraksi fitur dengan algoritma STFT pada {\it Wireless Sensor Network} telah berhasil dibangun.
+	\item Berdasarkan pengujian, aplikasi ini berhasil melakukan ekstraksi fitur pada WSN bertopologi {\it star} dan {\it tree} dengan jumlah sensor node sebanyak 6.
+\end{enumerate}
+
+\section{Saran}
+Berdasarkan hasil penelitian yang dilakukan, ada beberapa saran untuk pengembangan aplikasi sebagai berikut:
+\begin{enumerate}
+	\item Aplikasi ini hanya menggunakan algoritma {\it Cooley-Tukey FFT} dalam algoritma {\it Short Time Fourier Transform}. Terdapat 
+		algoritma {\it Fast Fourier Transform} lainnya yang mungkin lebih efisien dibandingkan algoritma {\it Cooley-Tukey} yang dapat 
+		diimplementasikan dalam algoritma STFT.
+	\item Aplikasi ini baru menggunakan 3 {\it window function} pada algoritma STFT, yaitu {\it Rectangle}, {\it Hanning}, dan {\it Hamming}. Terdapat {\it window function} lainnya yang dapat diterapkan pada algoritma STFT yang mungkin dapat menghasilkan hasil ekstraksi fitur lebih baik.
+\end{enumerate}

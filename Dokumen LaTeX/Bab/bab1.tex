@@ -1,0 +1,68 @@
+%versi 2 (8-10-2016) 
+\chapter{Pendahuluan}
+\label{chap:intro}
+   
+\section{Latar Belakang}
+\label{sec:label}
+
+{\it Wireless Sensor Network} (WSN) adalah jaringan nirkabel berupa {\it node - node} dan {\it base station / sink}. WSN dapat memiliki sensor - sensor pada {\it node} yang dapat mengukur atau {\it sensing} suara, getaran, suhu, kelembaban udara, dan lainnya. Setiap hasil pengukuran atau {\it sense} dari {\it node} dapat dikirimkan ke {\it base station / sink} untuk diproses lebih lanjut atau diproses pada {\it node} tersebut \cite{fundamentals:0:fundamental}. 
+
+Salah satu sensor yang terdapat di WSN adalah {\it accelerometer} yang dapat mendeteksi getaran dan mengukur percepatan pada {\it node} masing - masing. Hasil {\it sense} dari {\it accelerometer} adalah berupa 3 sumbu ($x$,$y$,$z$) yang menunjukkan arah dari sensor {\it node} tersebut. Data {\it sense} dari {\it accelerometer} perlu diolah untuk dapat menjadi informasi. Salah satu informasi yang dapat didapat dari hasil {\it sense accelerometer} adalah frekuensi getaran.
+
+Salah satu proses untuk mendapatkan frekuensi dari data {\it sense accelerometer} adalah dengan ekstraksi fitur domain waktu/frekuensi. Proses ekstraksi fitur domain waktu/frekuensi adalah proses pengambilan ciri sebuah objek yang dapat menggambarkan karakteristik dari objek tersebut pada domain waktu/frekuensi. Ada berbagai teknik analisis waktu/frekuensi yang dapat digunakan untuk ekstraksi fitur, seperti {\it Fast Fourier Transform} (FFT), {\it Short Time Fourier Transform} (STFT), {\it S-Transform} ,dan {\it Wavelet Transform} \cite{steven:0:dsp}. Proses ekstraksi ini dilakukan di sensor {\it node}, sehingga setiap hasil {\it sense} akselerometer akan langsung diekstraksi fitur dan dikirimkan ke {\it sink}. 
+
+Pada skripsi ini, akan dibuat sebuah perangkat lunak pada {\it node} WSN yang dapat mengekstraksi fitur data {\it sense} dari sensor {\it accelerometer}. Hasil dari ekstraksi fitur ini adalah frekuensi dari data {\it sense accelerometer} menggunakan salah satu teknik analisis waktu/frekuensi, yaitu {\it Short Time Fourier Transform (STFT)}.
+
+\section{Rumusan Masalah}
+\label{sec:rumusan}
+Berdasarkan latar belakang, berikut rumusan dari masalah - masalah yang ada. 
+\begin{itemize}
+	\item Bagaimana cara mengekstraksi fitur data akselerometer di sensor node WSN? 
+	\item Bagaimana cara kerja algoritma {\it Short Time Fourier Transform (STFT)} untuk data akselerometer?
+\end{itemize}
+
+\section{Tujuan}
+\label{sec:tujuan}
+\begin{itemize}
+	\item Menerapkan algoritma {\it Short Time Fourier Transform (STFT)} untuk data akselerometer.
+	\item Membangun aplikasi ekstraksi fitur untuk data akselerometer di sensor node WSN.
+\end{itemize}
+
+\section{Batasan Masalah}
+\label{sec:batasan}
+Penelitian ini memiliki batasan masalah sebagai berikut : 
+\begin{enumerate}
+	\item Sensor yang digunakan sebagai penelitian hanya sensor akselerometer.
+	\item Fokus dari penelitian ini adalah membangun aplikasi ekstraksi fitur domain waktu/frekuensi untuk data akselerometer di sensor node WSN oleh karena itu tidak memperhitungkan ekstraksi fitur pada data sensor lain selain data sensor akselerometer.
+\end{enumerate}
+
+\section{Metodologi}
+\label{sec:metlit}
+Berikut adalah metode penelitian yang digunakan dalam penelitan ini:
+\begin{itemize}
+	\item Melakukan studi literatur mengenai WSN ({\it Wireless Sensor Network} dan sensor {\it accelerometer}.
+	\item Melakukan studi literatur mengenai proses ekstraksi dan teknik {\it Short Time Fourier Transform}.
+	\item Mempelajari pemrograman di sensor {\it node} WSN menggunakan bahasa pemrograman Java.
+	\item Melakukan analisis terhadap aplikasi ekstraksi fitur domain waktu/frekuensi untuk data {\it accelerometer} di WSN.
+	\item Melakukan analisis proses ekstraksi fitur domain waktu/frekuensi.
+	\item Merancang algoritma untuk proses ekstraksi dengan STFT.
+	\item Mengimplementasikan keseluruhan algoritma yang dirancang ke {\it node} pada WSN.
+	\item Melakukan pengujian (dan eksperimen) pada perangkat lunak.
+	\item Menulis dokumen skripsi.
+\end{itemize}
+
+\section{Sistematika Pembahasan}
+\label{sec:sispem}
+Berikut sistematika pada setiap bab di penelitian ini:
+
+Bab 1 Pendahuluan, yaitu mengenai latar belakang, rumusan masalah, tujuan, batasan masalah, metode penelitian, dan sistematika penulisan.
+
+Bab 2 Landasan Teori, yaitu membahas tentang teori - teori untuk penelitian ini yaitu {\it Wireless Sensor Network}, {\it Accelerometer}, Ekstraksi Fitur, dan {\it Fourier Transform}.
+
+Bab 3 Analisis, yaitu membahas mengenai analisis aplikasi ekstraksi fitur domain waktu/frekuensi untuk data akselerometer di sensor node WSN dan analisis proses ekstraksi fitur.
+
+Bab 4 Perancangan, yaitu membahas perancangan interaksi antas node, perancangan antar muka untuk hasil {\it sensing} dan spectrogram, perancangan kelas aplikasi, perancangan masukan dan keluaran, dan perancangan pseudocode aplikasi.
+
+Bab 5 Implementasi dan pengujian, yaitu membahas mengenai implementasi dan pengujian aplikasi ekstraksi fitur domain waktu/frekuensi untuk data akselerometer di sensor node WSN.
+
+Bab 6 Kesimpulan, yaitu membahas mengenai kesimpulan dari hasil pengujian dan saran untuk penelitian ini.

@@ -1,0 +1,55 @@
+package UserApp;
+
+import java.io.*;
+
+/**
+*
+* @author Ivan Kristanto <ivankristanto12@gmail.com>
+*/
+
+public class Plotting {
+
+	public double plotAmplitude;
+	public String plotTime;
+	public double plotFreq;
+	public int plotFreqIdx;
+	public int plotIdx;
+	public boolean makePlot;
+	public static String senseResultDefaultPath = "C:\\Users\\Ifunk\\Desktop\\Skripsi\\Program Skripsi\\Sandbox\\SenseResult";
+	public static File fileHelper;
+	
+	/**
+	 * 
+	 */
+	public Plotting() {
+	}
+	
+	/**
+	 * 
+	 * @param sensorId
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 */
+	public void plotRealTime(String sensorId) throws FileNotFoundException, IOException {
+		String tempFilePath = senseResultDefaultPath + "\\" + sensorId + ".txt";
+		fileHelper = new File(tempFilePath);
+
+		BufferedReader br = new BufferedReader(new FileReader(fileHelper));
+		String temp = br.readLine();
+		
+		if(temp.length() != 0) {
+			makePlot = true;
+			String[] st;
+			st = temp.split(" ");
+			plotAmplitude = Double.parseDouble(st[4]);
+			plotTime = st[3];
+			plotFreq = Double.parseDouble(st[7]);
+			plotIdx = Integer.parseInt(st[6]);
+			plotFreqIdx = Integer.parseInt(st[5]);
+		}else {
+			makePlot = false;
+		}
+		
+		br.close();
+	}
+}
